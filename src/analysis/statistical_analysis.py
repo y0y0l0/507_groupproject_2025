@@ -6,7 +6,6 @@ This module contains functions for performing statistical analysis on healthcare
 
 import pandas as pd
 import numpy as np
-from scipy import stats
 
 
 def descriptive_statistics(df, column):
