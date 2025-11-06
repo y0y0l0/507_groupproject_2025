@@ -1,7 +1,8 @@
 
-from scripts.common_functions import get_unique_athletes,get_unique_sports,get_unique_date_ranges,get_num_device_records,get_invalid_athletes,get_multi_source_athletes
+from scripts.common_functions import get_unique_athletes,get_unique_sports,get_unique_date_ranges,get_num_device_records,get_invalid_athletes,get_multi_source_athletes,get_top_metrics_by_source,get_unique_metrics_count,get_date_range_and_counts_for_top_metrics
 import platform as platform
 '''
+1.2 Data Quality Assessment (Group)
 |Column                  |Type         |Description                                                                 |
 |------------------------|-------------|----------------------------------------------------------------------------|
 |id                      |BIGINT       |Unique record identifier (auto-increment)                                   |
@@ -36,5 +37,22 @@ device_count = get_num_device_records()
 ## Are there any athletes with missing or invalid names?
 find_invalid_athletes = get_invalid_athletes()
 
-##How many athletes have data from multiple sources (2 or 3 systems)?
+## How many athletes have data from multiple sources (2 or 3 systems)?
 find_multi_source_athletes = get_multi_source_athletes()
+
+'''1.3 Metric Discovery & Selection (Group)'''
+
+## Lists the top 10 most common metrics for Hawkins data (filter by data_source = 'Hawkins')
+top_hawkins_metrics = get_top_metrics_by_source('Hawkins',10)
+
+## Lists the top 10 most common metrics for Kinexon data (filter by data_source = 'Kinexon')
+top_kinexon_metrics = get_top_metrics_by_source('Kinexon',10)
+
+## Lists the top 10 most common metrics for Vald data (filter by data_source = 'Vald')
+top_vald_metrics = get_top_metrics_by_source('Vald',10)
+
+## Identifies how many unique metrics exist across all data sources
+unique_metrics_count = get_unique_metrics_count()
+
+## For each data source, show the date range and record count for the top metrics -- need to fix function
+date_range_and_counts = get_date_range_and_counts_for_top_metrics()

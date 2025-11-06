@@ -159,3 +159,67 @@ def get_multi_source_athletes() -> int:
     else:
         print("There are no athletes with data from multiple sources.")
     return response.shape[0]
+
+def get_top_metrics_by_source(data_source: str, top_n: int) -> pd.DataFrame:
+    """Get the top N most common metrics for a given data source.
+
+    Args:
+        data_source (str): The data source to filter by (e.g., 'Hawkins').
+        top_n (int): The number of top metrics to return.
+
+    Returns:
+        csv: A CSV file containing the top N metrics for the specified data source.
+    """
+    sql_query = f"""
+    SELECT metric,  COUNT(*) AS metric_count
+    FROM research_experiment_refactor_test
+    WHERE UPPER(data_source) = UPPER('{data_source}')
+    GROUP BY metric
+    ORDER BY metric_count DESC
+    LIMIT {top_n};
+    """
+    response = run_sport_data_query(sql_query)
+    if not response.empty:
+        print(f"Top {top_n} metrics for {data_source}:")
+        response.to_csv(f'output/top_{top_n}_metrics_{data_source}.csv')
+    return 0
+def get_unique_metrics_count() -> int:
+    """Get the count of unique metrics across all data sources.
+
+    Returns:
+        int: The count of unique metrics.
+        csv: A CSV file containing the unique metrics.
+    """
+    sql_query = "SELECT DISTINCT metric FROM research_experiment_refactor_test;"
+    response = run_sport_data_query(sql_query)
+    if not response.empty:
+        print(f"There are {response.shape[0]} unique metrics across all data sources.")
+        response.to_csv('output/uniqueMetrics.csv')
+    return response.shape[0]
+def get_date_range_and_counts_for_top_metrics() -> pd.DataFrame:
+    """Get the date range and record count for the top metrics by data source.
+
+    Returns:
+        pd.DataFrame: A DataFrame containing the date range and counts for top metrics.
+        csv: A CSV file containing the date range and counts for top metrics.
+    """
+    sql_query = """
+    SELECT data_source, metric,
+           MIN(timestamp) AS min_timestamp,
+           MAX(timestamp) AS max_timestamp,
+           COUNT(*) AS record_count
+    FROM research_experiment_refactor_test
+    WHERE metric IN (
+        SELECT metric
+        FROM research_experiment_refactor_test
+        GROUP BY metric
+        ORDER BY COUNT(*) DESC
+        LIMIT 10
+    )
+    GROUP BY data_source, metric;
+    """
+    response = run_sport_data_query(sql_query)
+    if not response.empty:
+        print("Date range and counts for top metrics by data source:")
+        response.to_csv('output/date_range_and_counts_top_metrics.csv')
+    return response 

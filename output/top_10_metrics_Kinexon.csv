@@ -1,0 +1,11 @@
+,metric,metric_count
+0,distance_total,40803
+1,accel_load_accum,40803
+2,event_count_exertion_category3,40803
+3,event_count_exertion_avg_per_minute,40803
+4,event_count_exertion_category1,40803
+5,event_count_exertion_category2_avg_per_minute,40803
+6,event_count_exertion_category3_avg_per_minute,40803
+7,event_count_exertion_category2,40803
+8,event_count_exertion,40803
+9,event_count_exertion_category1_avg_per_minute,40803
