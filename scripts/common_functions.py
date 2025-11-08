@@ -66,11 +66,11 @@ def get_unique_athletes() -> int:
         csv: A CSV file containing the player names.
     """
     ## How many unique athlete are in the database?
-    sql_test_query = "select playername from research_experiment_refactor_test  group by playername;"
+    sql_test_query = "select playername from research_experiment_refactor_test  group by playername order by playername DESC;"
     response = run_sport_data_query(sql_test_query)
     if not response.empty:
         response.to_csv('output/1.2-1_playerNames.csv')
-        print(f"There are Unique athletes {response.shape[0]} in the database.")
+        print(f"There are {response.shape[0]} unique athletesin the database.")
     return 0
 
 def get_unique_sports() -> int:

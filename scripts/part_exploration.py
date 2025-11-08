@@ -16,7 +16,7 @@ import platform as platform
 |session_description     |TEXT         |Detailed description of the session                                         |
 |function_description    |VARCHAR(255) |Movement or exercise description                                            |
 |data_source             |VARCHAR(50)  |Original data source (Hawkins, Kinexon, or Vald)                            |
-|created_at              |TIMESTAMP    |Record creation timestamp                                                   |
+|timestamp               |TIMESTAMP    |Record creation timestamp                                                   |
 |session_description     |TEXT         |Detailed description of the session                                         |
 |function_description    |VARCHAR(255) |Movement or exercise description                                            |
 |data_source             |VARCHAR(50)  |Original data source (Hawkins, Kinexon, or Vald)                            |
@@ -58,3 +58,4 @@ unique_metrics_count = get_unique_metrics_count()
 date_range_and_counts = get_date_range_and_counts_for_top_metrics('Hawkins',10)
 date_range_and_counts = get_date_range_and_counts_for_top_metrics('Kinexon',10)
 date_range_and_counts = get_date_range_and_counts_for_top_metrics('Vald',10)
+
