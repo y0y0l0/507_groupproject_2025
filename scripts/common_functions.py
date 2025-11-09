@@ -220,3 +220,25 @@ def get_date_range_and_counts_for_top_metrics(data_source: str, top_n: int) -> p
         print(f"Date min_timestamp {response['min_timestamp'].min()} and max_timestamp {response['max_timestamp'].max()} for top metrics by data source {data_source}.")
         response.to_csv(f'output/1.3-3_date_range_and_counts_top_metrics_{data_source}.csv', index=False)
     return response 
+def get_sports_team_and_counts_for_top_metrics(data_source: str, top_n: int) -> pd.DataFrame:
+    """Get the date range and record count for the top metrics by data source.
+
+    Returns:
+        pd.DataFrame: A DataFrame containing the date range and counts for top metrics.
+        csv: A CSV file containing the date range and counts for top metrics.
+    """
+    sql_query =f"""
+    SELECT metric, COUNT(*) AS record_count,
+            MAX(team) AS team
+    FROM research_experiment_refactor_test
+    WHERE UPPER(data_source) = UPPER('{data_source}')
+    GROUP BY metric
+    ORDER BY COUNT(*) DESC
+    LIMIT {top_n};
+    """
+    print(f"Executing query for {data_source}: {sql_query}")
+    response = run_sport_data_query(sql_query);
+    if not response.empty:
+        print(f"Teams for top metrics by data source {data_source}:")
+        response.to_csv(f'output/1.3-4_teams_and_counts_top_metrics_{data_source}.csv', index=False)
+    return response 

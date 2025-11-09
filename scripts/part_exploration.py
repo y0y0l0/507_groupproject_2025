@@ -1,6 +1,7 @@
 #from scripts.common_functions import run_sport_data_query
-from scripts.common_functions import get_unique_athletes,get_unique_sports,get_unique_date_ranges,get_num_device_records,get_invalid_athletes,get_multi_source_athletes,get_top_metrics_by_source,get_unique_metrics_count,get_date_range_and_counts_for_top_metrics
+from scripts.common_functions import get_sports_team_and_counts_for_top_metrics, get_unique_athletes,get_unique_sports,get_unique_date_ranges,get_num_device_records,get_invalid_athletes,get_multi_source_athletes,get_top_metrics_by_source,get_unique_metrics_count,get_date_range_and_counts_for_top_metrics
 import platform as platform
+
 '''
 1.2 Data Quality Assessment (Group)
 |Column                  |Type         |Description                                                                 |
@@ -58,4 +59,10 @@ unique_metrics_count = get_unique_metrics_count()
 date_range_and_counts = get_date_range_and_counts_for_top_metrics('Hawkins',10)
 date_range_and_counts = get_date_range_and_counts_for_top_metrics('Kinexon',10)
 date_range_and_counts = get_date_range_and_counts_for_top_metrics('Vald',10)
+
+## Team question: How many unique teams are represented in the top metrics for each data source?
+teams = get_sports_team_and_counts_for_top_metrics('Vald',10)
+teams = get_sports_team_and_counts_for_top_metrics('Hawkins',10)    
+teams = get_sports_team_and_counts_for_top_metrics('Kinexon',10)
+
 
