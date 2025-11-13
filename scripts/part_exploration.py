@@ -1,4 +1,3 @@
-#from scripts.common_functions import run_sport_data_query
 from scripts.common_functions import get_sports_team_and_counts_for_top_metrics, get_unique_athletes,get_unique_sports,get_unique_date_ranges,get_num_device_records,get_invalid_athletes,get_multi_source_athletes,get_top_metrics_by_source,get_unique_metrics_count,get_date_range_and_counts_for_top_metrics
 import platform as platform
 
@@ -11,7 +10,7 @@ import platform as platform
 |timestamp               |DATETIME     |Date and time of the measurement/session                                    |
 |device                  |VARCHAR(50)  |Specific device/equipment used for measurement                              |
 |metric                  |VARCHAR(255) |Name of the performance metric being measured                               |
-|value                   |DECIMAL(20,6)|Numeric value of the metric                                                 |
+|value                   |DECIMAL(20,6)|Numeric value of the metric                                           |
 |team                    |VARCHAR(255) |Sport/team affiliation (e.g., Football, Soccer, Basketball)                 |
 |session_type            |VARCHAR(255) |Type of session (e.g., Practice, Game, Training) - only relevant for Kinexon|
 |session_description     |TEXT         |Detailed description of the session                                         |

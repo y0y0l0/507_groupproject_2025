@@ -55,8 +55,9 @@ def run_sport_data_query(sql: str, engine: Engine = None) -> pd.DataFrame:
         print(response.head(10))
         return response
     except Exception as e:
-	    print("Error during diagnostics:", e)
-traceback.print_exc()
+        print("Error during diagnostics:", e)
+        traceback.print_exc()
+        return pd.DataFrame()  # Return empty DataFrame on error
 def get_unique_athletes() -> int:
     """Get the number of unique athletes in the database.
 
@@ -172,9 +173,11 @@ def get_top_metrics_by_source(data_source: str, top_n: int) -> pd.DataFrame:
         csv: A CSV file containing the top N metrics for the specified data source.
     """
     sql_query = f"""
-    SELECT metric,  COUNT(*) AS metric_count
+    SELECT  metric, COUNT(*) AS metric_count
     FROM research_experiment_refactor_test
     WHERE UPPER(data_source) = UPPER('{data_source}')
+    AND value is not null and value> 0.0
+    AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)')
     GROUP BY metric
     ORDER BY metric_count DESC
     LIMIT {top_n};
@@ -205,12 +208,14 @@ def get_date_range_and_counts_for_top_metrics(data_source: str, top_n: int) -> p
         csv: A CSV file containing the date range and counts for top metrics.
     """
     sql_query =f"""
-    SELECT metric, COUNT(*) AS record_count,
+    SELECT   metric, COUNT(*) AS record_count,
             MIN(timestamp) AS min_timestamp,
             MAX(timestamp) AS max_timestamp
     FROM research_experiment_refactor_test
     WHERE UPPER(data_source) = UPPER('{data_source}')
-    GROUP BY metric
+    AND value is not null and value> 0.0
+    AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)')
+    GROUP BY  metric
     ORDER BY COUNT(*) DESC
     LIMIT {top_n};
     """
@@ -228,11 +233,13 @@ def get_sports_team_and_counts_for_top_metrics(data_source: str, top_n: int) -> 
         csv: A CSV file containing the date range and counts for top metrics.
     """
     sql_query =f"""
-    SELECT metric, COUNT(*) AS record_count,
-            MAX(team) AS team
+    SELECT  metric, COUNT(*) AS record_count,
+            MAX(REPLACE(team,'\\'','')) AS team
     FROM research_experiment_refactor_test
     WHERE UPPER(data_source) = UPPER('{data_source}')
-    GROUP BY metric
+    AND value > 0.0
+    AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)')
+    GROUP BY  metric
     ORDER BY COUNT(*) DESC
     LIMIT {top_n};
     """

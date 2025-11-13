@@ -1,11 +1,11 @@
 metric,record_count,min_timestamp,max_timestamp
-distance_total,40803,2021-06-17 21:49:39,2025-10-21 12:24:21
-accel_load_accum,40803,2021-06-17 21:49:39,2025-10-21 12:24:21
-event_count_exertion_category3,40803,2021-06-17 21:49:39,2025-10-21 12:24:21
-event_count_exertion_avg_per_minute,40803,2021-06-17 21:49:39,2025-10-21 12:24:21
-event_count_exertion_category1,40803,2021-06-17 21:49:39,2025-10-21 12:24:21
-event_count_exertion_category2_avg_per_minute,40803,2021-06-17 21:49:39,2025-10-21 12:24:21
-event_count_exertion_category3_avg_per_minute,40803,2021-06-17 21:49:39,2025-10-21 12:24:21
-event_count_exertion_category2,40803,2021-06-17 21:49:39,2025-10-21 12:24:21
-event_count_exertion,40803,2021-06-17 21:49:39,2025-10-21 12:24:21
-event_count_exertion_category1_avg_per_minute,40803,2021-06-17 21:49:39,2025-10-21 12:24:21
+track_outside_field,40803,2021-06-17 21:49:39,2025-10-21 12:24:21
+track_heart_rate_always,40803,2021-06-17 21:49:39,2025-10-21 12:24:21
+accel_load_accum,40703,2021-06-17 21:49:39,2025-10-21 12:24:21
+time_total,40585,2021-06-17 21:49:39,2025-10-21 12:24:21
+accel_load_accum_avg_per_minute,40485,2021-06-17 21:49:39,2025-10-21 12:24:21
+distance_total,40317,2021-06-17 21:49:39,2025-10-21 12:24:21
+speed_distance_per_time,40316,2021-06-17 21:49:39,2025-10-21 12:24:21
+distance_total_avg_per_minute,40315,2021-06-17 21:49:39,2025-10-21 12:24:21
+speed_max,40312,2021-06-17 21:49:39,2025-10-21 12:24:21
+speed_avg,40298,2021-06-17 21:49:39,2025-10-21 12:24:21

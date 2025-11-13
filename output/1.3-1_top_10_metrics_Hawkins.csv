@@ -1,11 +1,11 @@
 ,metric,metric_count
-0,System Weight(N),32373
-1,Peak Velocity(m/s),32123
-2,Propulsive Phase(s),32123
-3,Avg. Relative Propulsive Force(%),32123
-4,Avg. Propulsive Power(W),32123
-5,Avg. Propulsive Force(N),32123
-6,Propulsive Net Impulse(N.s),32123
-7,Jump Height(m),32123
-8,Peak Propulsive Force(N),32123
-9,Peak Propulsive Power(W),32123
+0,System Weight(N),31467
+1,Propulsive Net Impulse(N.s),31295
+2,Peak Propulsive Force(N),31295
+3,Avg. Propulsive Power(W),31295
+4,Jump Height(m),31295
+5,Peak Velocity(m/s),31295
+6,Propulsive Phase(s),31295
+7,Peak Propulsive Power(W),31295
+8,Avg. Relative Propulsive Force(%),31295
+9,Avg. Propulsive Force(N),31295

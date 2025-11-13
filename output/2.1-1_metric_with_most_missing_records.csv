@@ -1,0 +1,7 @@
+,count,metric,data_source
+0,803,rightTorque,vald
+1,800,leftTorque,vald
+2,761,rightMaxForce,vald
+3,758,leftMaxForce,vald
+4,486,distance_total,kinexon
+5,100,accel_load_accum,kinexon
