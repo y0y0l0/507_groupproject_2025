@@ -83,4 +83,6 @@ def get_athletes_with_5_measurements_not_in_selected_metrics() -> int:
 
     if not response.empty:
         response.to_csv('output/2.1-2_athletes_with_5_measurements_not_in_metric.csv')
-    return response.head()
+        print(f"The percentage of athletes with at least 5 measurements in selected metrics is {response['playername'].nunique()/get_unique_athletes() * 100:.2f}%.")
+ 
+    return response['playername'].unique()
