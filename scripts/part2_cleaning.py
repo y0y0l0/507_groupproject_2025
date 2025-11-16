@@ -1,8 +1,7 @@
-from common_clean_functions import get_all_clean_metrics_records,get_metric_with_most_missing_records,get_athletes_with_at_least_5_measurements_in_selected_metrics,get_athletes_with_5_measurements_not_in_selected_metrics
+from common_clean_functions import get_data_in_wide_format_by_athlete_and_metric,get_team_percentages_with_athletes_with_at_least_5_measurements,get_athletes_not_tested_in_last_6_months,get_all_clean_metrics_records,get_metric_with_most_missing_records,get_athletes_with_at_least_5_measurements_in_selected_metrics,get_athletes_with_5_measurements_not_in_selected_metrics
 import platform as platform
 
-'''
-1.2 Data Quality Assessment (Group)
+'''2.1 Data Understanding Recap (Group)
 |Column                  |Type         |Description                                                                 |
 |------------------------|-------------|----------------------------------------------------------------------------|
 |id                      |BIGINT       |Unique record identifier (auto-increment)                                   |
@@ -22,22 +21,38 @@ import platform as platform
 |data_source             |VARCHAR(50)  |Original data source (Hawkins, Kinexon, or Vald)                            |
 |created_at              |TIMESTAMP    |Record creation timestamp                                                   |
 '''
-## Identify which of your selected metrics have the most NULL or zero records.
 
+#2.1 Missing Data Analysis (Group)
+##2.1-1 Identify which of your selected metrics have the most NULL or zero records.
 get_all_clean_metrics_records()
 get_metric_with_most_missing_records()
 
-## For each sport/team, calculate what percentage of athletes have at least 5 measurements for your selected metrics ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total')
+##2.1-2 For each sport/team, calculate what percentage of athletes have at least 5 measurements for your selected metrics ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total')
 get_athletes_with_at_least_5_measurements_in_selected_metrics()
-# 459 out of 1287 players have at least 5 measurements 
-# Percentage = (459/1287)*100 = 35.67%
-
+# 459 out of 1287 players in the selected metrics have at least 5 measurements 
+# Percentage = (459/1287)*100 = 35.66%
 get_athletes_with_5_measurements_not_in_selected_metrics()
+# 811 out of 1287 players NOT in the selected metrics have at least 5 measurements 
+# Percentage = (811/1287)*100 = 63.01%
+get_team_percentages_with_athletes_with_at_least_5_measurements()
+##2.1-3 Identify athletes who haven't been tested in the last 6 months (for your selected metrics)
+get_athletes_not_tested_in_last_6_months()
+##2.1.4 Determine if you have sufficient data to answer your research question
+'''------------------<TODO: Team Discussion>--------------------------
+Based on the data understanding and missing data analysis, we have identified that while a significant portion of athletes have sufficient measurements for our selected metrics, there remains a considerable number of athletes with insufficient data. This discrepancy may impact the robustness of our analysis and the validity of our conclusions.
+To address this, we propose the following steps:        '''
+'''1. Data Imputation: For athletes with missing measurements, we can explore data imputation techniques to estimate missing values based on available data trends. This will help in retaining more athletes in our analysis.        '''
+'''2. Focused Analysis: We may consider narrowing our research question to focus on athletes with sufficient data, ensuring that our findings are based on reliable measurements.        '''
+'''3. Additional Data Collection: If feasible, we could look into collecting additional data for athletes with insufficient measurements to enhance the dataset's completeness.        '''
+'''4. Sensitivity Analysis: Conduct sensitivity analyses to understand how the presence of missing data might affect our results and interpretations.        '''
 
-## Identify athletes who haven't been tested in the last 6 months (for your selected metrics)
-#get_athletes_not_tested_in_last_6_months()
-## Determine if you have sufficient data to answer your research question
-
+'''2.2 -Data Transformation Challenge  helper function that returns clean data for selected metrics list and playername list'''
+## Define the list of metrics and player names
+metric_list = ['leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total']
+playername_list = ['PLAYER_755', 'PLAYER_690', 'PLAYER_1128']
+## Call the function to get data in The data is in "long format" (one row per metric per timestamp) to to "wide format"
+get_data_in_wide_format_by_athlete_and_metric(metric_list, playername_list,"long")
+get_data_in_wide_format_by_athlete_and_metric(metric_list, playername_list,"wide")
 
 
 

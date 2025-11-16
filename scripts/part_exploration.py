@@ -22,46 +22,47 @@ import platform as platform
 |data_source             |VARCHAR(50)  |Original data source (Hawkins, Kinexon, or Vald)                            |
 |created_at              |TIMESTAMP    |Record creation timestamp                                                   |
 '''
-## How many unique athlete are in the database?
+## 1.2.1 -How many unique athlete are in the database?
 num_unique_athletes = get_unique_athletes()
 
-## How many different sports/teams are represented in the database?
+## 1.2.2 -How many different sports/teams are represented in the database?
 num_unique_sports = get_unique_sports()
 
-## What is the date range of available data?
+## 1.2.3 -What is the date range of available data?
 date_range = get_unique_date_ranges()
 
-## Which data source (Hawkins/Kinexon/Vald) has the most records?
+## 1.2.4 -Which data source (Hawkins/Kinexon/Vald) has the most records?
 device_count = get_num_device_records()
 
-## Are there any athletes with missing or invalid names?
+## 1.2.5 -Are there any athletes with missing or invalid names?
 find_invalid_athletes = get_invalid_athletes()
 
-## How many athletes have data from multiple sources (2 or 3 systems)?
+## 1.2.6 -How many athletes have data from multiple sources (2 or 3 systems)?
 find_multi_source_athletes = get_multi_source_athletes()
 
 '''1.3 Metric Discovery & Selection (Group)'''
 
-## Lists the top 10 most common metrics for Hawkins data (filter by data_source = 'Hawkins')
+## 1.3.1 Lists the top 10 most common metrics for Hawkins data (filter by data_source = 'Hawkins')
 top_hawkins_metrics = get_top_metrics_by_source('Hawkins',10)
 
-## Lists the top 10 most common metrics for Kinexon data (filter by data_source = 'Kinexon')
+## 1.3.2 Lists the top 10 most common metrics for Kinexon data (filter by data_source = 'Kinexon')
 top_kinexon_metrics = get_top_metrics_by_source('Kinexon',10)
 
-## Lists the top 10 most common metrics for Vald data (filter by data_source = 'Vald')
+## 1.3.3 Lists the top 10 most common metrics for Vald data (filter by data_source = 'Vald')
 top_vald_metrics = get_top_metrics_by_source('Vald',10)
 
-## Identifies how many unique metrics exist across all data sources
+## 1.3.4 Identifies how many unique metrics exist across all data sources
 unique_metrics_count = get_unique_metrics_count()
 
-## For each data source, show the date range and record count for the top metrics
+## 1.3.5 For each data source, show the date range and record count for the top metrics
 date_range_and_counts = get_date_range_and_counts_for_top_metrics('Hawkins',10)
 date_range_and_counts = get_date_range_and_counts_for_top_metrics('Kinexon',10)
 date_range_and_counts = get_date_range_and_counts_for_top_metrics('Vald',10)
 
-## Team question: How many unique teams are represented in the top metrics for each data source?
+## 1.3 (Team discussion question) Team question: How many unique teams are represented in the top metrics for each data source?
 teams = get_sports_team_and_counts_for_top_metrics('Vald',10)
 teams = get_sports_team_and_counts_for_top_metrics('Hawkins',10)    
 teams = get_sports_team_and_counts_for_top_metrics('Kinexon',10)
+
 
 

@@ -80,7 +80,7 @@ def get_unique_sports() -> int:
         int: The count of unique sports/teams.
         csv: A CSV file containing the sport names.
     """
-    sql_query = "SELECT team FROM research_experiment_refactor_test group by team;"
+    sql_query = "SELECT team FROM research_experiment_refactor_test WHERE team IS NOT NULL and team is not in ('Unknown','Player Not Found','Graduated (No longer enrolled)') GROUP BY team;"
     response = run_sport_data_query(sql_query)
     if not response.empty:
         response.to_csv('output/1.2-2_sportTeams.csv')
@@ -233,7 +233,9 @@ def get_sports_team_and_counts_for_top_metrics(data_source: str, top_n: int) -> 
         csv: A CSV file containing the date range and counts for top metrics.
     """
     sql_query =f"""
-    SELECT  metric, COUNT(*) AS record_count,
+    SELECT  metric, 
+            COUNT(*) AS record_count,
+            COUNT(DISTINCT TRIM(REPLACE(team, '\'', ''))) AS unique_team_count,
             MAX(REPLACE(team,'\\'','')) AS team
     FROM research_experiment_refactor_test
     WHERE UPPER(data_source) = UPPER('{data_source}')
