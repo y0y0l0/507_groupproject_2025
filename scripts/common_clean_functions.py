@@ -43,48 +43,62 @@ def get_metric_with_most_missing_records() -> int:
     return response
 
 def get_athletes_with_at_least_5_measurements_in_selected_metrics() -> int:
-    """Get the percentage of athletes with at least 5 measurements.
+    """Get the percentage of athletes with at least 5 measurements per team.
     Returns:
-        int: The percentage of athletes with at least 5 measurements.
-        csv: A CSV file containing all records.
+        pd.DataFrame: DataFrame with team, athlete counts, and percentages.
+        csv: A CSV file containing results per team.
     """
     ## For each sport/team, calculate what percentage of athletes have at least 5 measurements for your selected metrics?
-     #"-AND TRIM(metric) in ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total') " \
-    sql_test_query ="SELECT  metric, playername, COUNT(*) as player_counter " \
-                        "FROM research_experiment_refactor_test WHERE value IS NOT NULL AND value > 0.0 " \
-                        "AND metric in ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total') " \
-                        "AND REPLACE(team,'\\'','') NOT IN('Unknown','Player Not Found','Graduated (No longer enrolled)') " \
-                        "GROUP BY metric, playername " \
-                        "HAVING COUNT(*) >= 5 " \
-                        "ORDER BY player_counter DESC;"
+    sql_test_query = "SELECT REPLACE(t.team, '\\'', '') AS team, " \
+                     "COUNT(DISTINCT CASE WHEN cnt >= 5 THEN playername END) AS athletes_with_5_plus, " \
+                     "COUNT(DISTINCT playername) AS total_athletes_in_team, " \
+                     "ROUND(COUNT(DISTINCT CASE WHEN cnt >= 5 THEN playername END) / " \
+                     "COUNT(DISTINCT playername) * 100, 2) AS percentage " \
+                     "FROM (SELECT REPLACE(team, '\\'', '') AS team, playername, COUNT(*) AS cnt " \
+                     "FROM research_experiment_refactor_test " \
+                     "WHERE value IS NOT NULL AND value > 0.0 " \
+                     "AND metric IN ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total') " \
+                     "AND REPLACE(team, '\\'', '') NOT IN ('Unknown', 'Player Not Found', 'Graduated (No longer enrolled)') " \
+                     "GROUP BY REPLACE(team, '\\'', ''), playername) t " \
+                     "GROUP BY REPLACE(t.team, '\\'', '') " \
+                     "ORDER BY percentage DESC;"
     response = run_sport_data_query(sql_test_query)
 
     if not response.empty:
-        response.to_csv('output/2.1-2_athletes_with_at_least_5_measurements_in_selected_metrics.csv')
-        print(f"The percentage of athletes with at least 5 measurements in selected metrics is {response['playername'].nunique()/get_unique_athletes() * 100:.2f}% among all athletes.")
-    return response['playername'].unique()
+        response.to_csv('output/2.1-2_athletes_with_at_least_5_measurements_in_selected_metrics.csv', index=False)
+        print(f"Percentage of athletes with at least 5 measurements per team:")
+        for index, row in response.iterrows():
+            print(f"  {row['team']}: {row['percentage']}% ({row['athletes_with_5_plus']}/{row['total_athletes_in_team']})")
+    return response
 
 def get_athletes_with_5_measurements_not_in_selected_metrics() -> int:
-    """Get the percentage of athletes with at least 5 measurements.
+    """Get the percentage of athletes with at least 5 measurements per team for non-selected metrics.
     Returns:
-        int: The percentage of athletes with at least 5 measurements.
-        csv: A CSV file containing all records.
+        pd.DataFrame: DataFrame with team, athlete counts, and percentages.
+        csv: A CSV file containing results per team.
     """
-    ## For each sport/team, calculate what percentage of athletes have at least 5 measurements for your selected metrics?
-     #"-AND TRIM(metric) in ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total') " \
-    sql_test_query ="SELECT  metric, playername, COUNT(*) as player_counter " \
-                        "FROM research_experiment_refactor_test WHERE value IS NOT NULL AND value > 0.0 " \
-                        "AND metric not in ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total') " \
-                        "AND REPLACE(team,'\\'','') NOT IN('Unknown','Player Not Found','Graduated (No longer enrolled)') " \
-                        "GROUP BY metric, playername " \
-                        "HAVING COUNT(*) >= 5 " \
-                        "ORDER BY player_counter DESC;"
+    ## For each sport/team, calculate what percentage of athletes have at least 5 measurements not in your selected metrics?
+    sql_test_query = "SELECT REPLACE(t.team, '\\'', '') AS team, " \
+                     "COUNT(DISTINCT CASE WHEN cnt >= 5 THEN playername END) AS athletes_with_5_plus, " \
+                     "COUNT(DISTINCT playername) AS total_athletes_in_team, " \
+                     "ROUND(COUNT(DISTINCT CASE WHEN cnt >= 5 THEN playername END) / " \
+                     "COUNT(DISTINCT playername) * 100, 2) AS percentage " \
+                     "FROM (SELECT REPLACE(team, '\\'', '') AS team, playername, COUNT(*) AS cnt " \
+                     "FROM research_experiment_refactor_test " \
+                     "WHERE value IS NOT NULL AND value > 0.0 " \
+                     "AND metric NOT IN ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total') " \
+                     "AND REPLACE(team, '\\'', '') NOT IN ('Unknown', 'Player Not Found', 'Graduated (No longer enrolled)') " \
+                     "GROUP BY REPLACE(team, '\\'', ''), playername) t " \
+                     "GROUP BY REPLACE(t.team, '\\'', '') " \
+                     "ORDER BY percentage DESC;"
     response = run_sport_data_query(sql_test_query)
 
     if not response.empty:
-        response.to_csv('output/2.1-2_athletes_with_5_measurements_not_in_metric.csv')
-        print(f"The percentage of athletes with at least 5 measurements in NON-selected metrics is {response['playername'].nunique()/get_unique_athletes() * 100:.2f}% among all athletes.")
-    return response['playername'].unique()
+        response.to_csv('output/2.1-2_athletes_with_5_measurements_not_in_metric.csv', index=False)
+        print(f"Percentage of athletes with at least 5 measurements in NON-selected metrics per team:")
+        for index, row in response.iterrows():
+            print(f"  {row['team']}: {row['percentage']}% ({row['athletes_with_5_plus']}/{row['total_athletes_in_team']})")
+    return response
 
 def get_team_percentages_with_athletes_with_at_least_5_measurements() -> int:
     """Get the percentage of athletes with at least 5 measurements for each sport/team.
@@ -123,9 +137,9 @@ def get_athletes_not_tested_in_last_6_months() -> int:
     ## get mysql date 6 months ago
     six_months_ago = (datetime.now() - timedelta(days=180)).strftime('%Y-%m-%d %H:%M:%S')
     ## get athletes who haven't been tested in the last 6 months (for your selected metrics)
-    sql_test_query = "SELECT DISTINCT playername " \
-                        "FROM (SELECT DISTINCT playername FROM research_experiment_refactor_test " \
-                        "WHERE REPLACE(team,'\\'','') NOT IN ('Unknown','Player Not Found','Graduated (No longer enrolled)') " \
+    sql_test_query = "SELECT DISTINCT playername, team " \
+                        "FROM (SELECT DISTINCT playername, team FROM research_experiment_refactor_test " \
+                        "WHERE REPLACE(team,'\\\'','') NOT IN ('Unknown','Player Not Found','Graduated (No longer enrolled)') " \
                         "AND metric IN ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total')) AS all_athletes " \
                         "WHERE playername NOT IN (SELECT DISTINCT playername FROM research_experiment_refactor_test " \
                         "WHERE value IS NOT NULL AND value > 0.0 " \

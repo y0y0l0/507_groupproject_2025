@@ -31,6 +31,7 @@ get_metric_with_most_missing_records()
 get_athletes_with_at_least_5_measurements_in_selected_metrics()
 # 459 out of 1287 players in the selected metrics have at least 5 measurements 
 # Percentage = (459/1287)*100 = 35.66%
+
 get_athletes_with_5_measurements_not_in_selected_metrics()
 # 811 out of 1287 players NOT in the selected metrics have at least 5 measurements 
 # Percentage = (811/1287)*100 = 63.01%
@@ -46,6 +47,7 @@ To address this, we propose the following steps:        '''
 '''3. Additional Data Collection: If feasible, we could look into collecting additional data for athletes with insufficient measurements to enhance the dataset's completeness.        '''
 '''4. Sensitivity Analysis: Conduct sensitivity analyses to understand how the presence of missing data might affect our results and interpretations.        '''
 
+
 '''2.2 - Data Transformation Challenge  helper function that returns clean data for selected metrics list and playername list'''
 ## Define the list of metrics and player names
 metric_list = ['leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total']
@@ -54,4 +56,4 @@ playername_list = ['PLAYER_755', 'PLAYER_690', 'PLAYER_1128']
 get_data_in_wide_format_by_athlete_and_metric(metric_list, playername_list,"wide")
 ''' 2.3 - Create a Derived Metric'''
 ## Calculates the mean value for each team (using the team column)
-get_mean_value_for_each_team()
+#get_mean_value_for_each_team()
