@@ -1,0 +1,7 @@
+SQL_USERNAME=ahistudent
+SQL_PASSWORD=researcher
+SQL_TABLE_NAME=research_experiment_refactor_test
+SQL_HOSTNAME= shtm-fallprev.mysql.database.azure.com
+SQL_PORT=3306
+SQL_DATABASE=sbu_athletics
+SQL_TEST_QUERY=SELECT * FROM research_experiment_refactor_test limit 100;
