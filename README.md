@@ -1,7 +1,18 @@
 # HHA507_Group_Project
-Group Project
-## Project Structure
+
+Group SBU Sports data Project
+Goal of this project is to analyze sports performance data from multiple sources (Hawkins, Kinexon, Vald) to identify key metrics that can help improve athlete performance and reduce injury risk.
+
 # Team Data Setup:
+link to team database setup screenshots: https://drive.google.com/drive/folders/1bX1Yk2YJH1KX1Z3o1F6gD3fQXK5Jt5vP?usp=sharing
+
+# Team presentation slides:
+link to team presendation slides: https://docs.google.com/presentation/d/1IiI5CwbIHg4V8L8NR5JBr0AiKxmIxBGMQci9IVsK6oo/edit?usp=sharing
+
+# Team literature review:
+link to team literature review: https://docs.google.com/document/d/1hs3RljvobFhrrgEVS4Ev2E5Cl8YE0w7z1t3h8Qo_D-A/edit?tab=t.0
+
+## Project Structure
     HHA507_Group_Project/                  # Root directory
     ├── 1.1 Team Database Setup Screenshots/  # Directory for team database setup screenshots from each team member
     |

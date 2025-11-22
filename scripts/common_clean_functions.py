@@ -280,7 +280,11 @@ def get_all_clean_metrics_records(report_type:str) -> int:
         output_file = 'output/3.2-1_all_clean_metrics_records.csv'
         if report_type.upper() == "WIDE":
             response = response.pivot_table(index=['playername', 'timestamp', 'team'], columns='metric', values='value').reset_index()
-            output_file = 'output/3.2-1_all_clean_metrics_records_wide_format.csv'
+            output_file = 'output/3.2-1_all_clean_metrics_records_wide_format.csv'\
+            
+            # data must be pivoted to calculate avg_torque_asymmetry and avg_max_force_asymmetry after pivot
+            response['avg_torque_asymmetry'] = (response['leftTorque'] - response['rightTorque']).abs() / ((response['leftTorque'] + response['rightTorque']) / 2)
+            response['avg_max_force_asymmetry'] = (response['leftMaxForce'] - response['rightMaxForce']).abs() / ((response['leftMaxForce'] + response['rightMaxForce']) / 2)
         try:
             response.to_csv(output_file)
             print(f"Successfully saved to {output_file}")

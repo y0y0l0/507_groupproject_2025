@@ -17,7 +17,7 @@ def get_matched_metrics_by_date() -> pd.DataFrame:
         csv: A CSV file containing the matched data.
     """
     
-    # Get all strength metrics
+    # Get all strength metrics - right and left max force and torque
     strength_query = """
     SELECT 
         timestamp as test_timestamp,
@@ -35,7 +35,7 @@ def get_matched_metrics_by_date() -> pd.DataFrame:
     GROUP BY timestamp, playername, team
     """
     
-    # Get all accel/distance metrics
+    # Get all accel and distance metrics
     accel_query = """
     SELECT 
         timestamp as accel_distance_timestamp,
@@ -70,7 +70,10 @@ def get_matched_metrics_by_date() -> pd.DataFrame:
         on=['playername', 'team'],
         how='inner'
     )
-    
+    # Caclulate avg_torque_asymmetry and avg_max_force_asymmetry
+    merged['avg_torque_asymmetry'] = (merged['leftTorque'] - merged['rightTorque']) / ((merged['leftTorque'] + merged['rightTorque']) / 2)*100
+    merged['avg_max_force_asymmetry'] = (merged['leftMaxForce'] - merged['rightMaxForce']) / ((merged['leftMaxForce'] + merged['rightMaxForce']) / 2)*100
+   
     # Filter: only keep accel tests on the same date as strength test
     merged['strength_date'] = merged['test_timestamp'].dt.date
     merged['accel_date'] = merged['accel_distance_timestamp'].dt.date
@@ -90,8 +93,8 @@ def get_matched_metrics_by_date() -> pd.DataFrame:
     
     # Reorder columns
     matched = matched[['test_date', 'test_timestamp', 'playername', 'team', 
-                       'leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque',
-                       'accel_load_accum', 'distance_total', 'accel_distance_test_date', 
+                       'leftMaxForce', 'rightMaxForce', 'avg_max_force_asymmetry','leftTorque', 'rightTorque',
+                       'avg_torque_asymmetry', 'accel_load_accum', 'distance_total', 'accel_distance_test_date', 
                        'accel_distance_timestamp']]
     
     # Sort for output
