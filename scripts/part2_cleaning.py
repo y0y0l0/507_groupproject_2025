@@ -1,5 +1,6 @@
-from common_clean_functions import get_data_in_wide_format_by_athlete_and_metric,get_team_percentages_with_athletes_with_at_least_5_measurements,get_athletes_not_tested_in_last_6_months,get_all_clean_metrics_records,get_metric_with_most_missing_records,get_athletes_with_at_least_5_measurements_in_selected_metrics,get_athletes_with_5_measurements_not_in_selected_metrics,get_mean_value_for_each_team
 import platform as platform
+from common_clean_functions import get_data_in_wide_format_by_athlete_and_metric,get_team_percentages_with_athletes_with_at_least_5_measurements,get_athletes_not_tested_in_last_6_months,get_all_clean_metrics_records,get_metric_with_most_missing_records,get_athletes_with_at_least_5_measurements_in_selected_metrics,get_athletes_with_5_measurements_not_in_selected_metrics,get_mean_value_for_each_team
+from matched_metrics_function import get_matched_metrics_by_date
 
 '''2.1 Data Understanding Recap (Group)
 |Column                  |Type         |Description                                                                 |
@@ -58,6 +59,10 @@ get_data_in_wide_format_by_athlete_and_metric(metric_list, "all","wide")
 ## Calculates the mean value for each team (using the team column)
 get_mean_value_for_each_team()
 
-''' 3.2 - Export Cleaned Data'''
+''' 3.2-1 - Export Cleaned Data'''
 ## output all cleaned metrics records to a CSV file for slected metrics ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total', 'avg_accel_load_accum','avg_torque_asymmetry','avg_max_force_asymmetry')
 get_all_clean_metrics_records("wide")
+
+''' 3.1-2 Match Force/Torque Metrics with Accel_Load_Accum and Distance_Total by Date'''
+## Call the function to match metrics by the most recent date
+get_matched_metrics_by_date()

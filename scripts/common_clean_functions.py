@@ -287,3 +287,4 @@ def get_all_clean_metrics_records(report_type:str) -> int:
         except PermissionError as e:
             print(f"Permission error writing to {output_file}: {e}")
     return response
+
