@@ -70,9 +70,10 @@ def get_matched_metrics_by_date() -> pd.DataFrame:
         on=['playername', 'team'],
         how='inner'
     )
-    # Caclulate avg_torque_asymmetry and avg_max_force_asymmetry
-    merged['avg_torque_asymmetry'] = (merged['leftTorque'] - merged['rightTorque']) / ((merged['leftTorque'] + merged['rightTorque']) )*100
-    merged['avg_max_force_asymmetry'] = (merged['leftMaxForce'] - merged['rightMaxForce']) / ((merged['leftMaxForce'] + merged['rightMaxForce']) )*100
+    # Caclulate avg_torque_asymmetry and avg_max_force_asymmetry - using formula from index 10 in the results analysis on our literature review
+            # reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC8488821/
+    merged['avg_torque_asymmetry'] = ((merged['leftTorque'] - merged['rightTorque']) / (merged['leftTorque'] + merged['rightTorque']) )*100
+    merged['avg_max_force_asymmetry'] = ((merged['leftMaxForce'] - merged['rightMaxForce']) / (merged['leftMaxForce'] + merged['rightMaxForce']) )*100
    
     # Filter: only keep accel tests on the same date as strength test
     merged['strength_date'] = merged['test_timestamp'].dt.date

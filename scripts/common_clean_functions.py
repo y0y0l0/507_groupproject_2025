@@ -270,7 +270,7 @@ def get_all_clean_metrics_records(report_type:str) -> int:
         csv: A CSV file containing all records.
     """
     ## How many unique athlete are in the database?
-    sql_test_query = "SELECT  timestamp,created_at,metric,data_source, value,REPLACE(team,'\\'','') as team, playername " \
+    sql_test_query = "SELECT  DATE(timestamp) as test_date,timestamp,created_at,metric,data_source, value,REPLACE(team,'\\'','') as team, playername " \
                         "FROM research_experiment_refactor_test WHERE value is not null AND value > 0.0 " \
                         "AND TRIM(metric) in ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total', 'avg_accel_load_accum','avg_torque_asymmetry','avg_max_force_asymmetry')" \
                         "AND TRIM(REPLACE(team,'\\'',''))  not in ('Unknown','Player Not Found','Graduated (No longer enrolled)');"
@@ -282,10 +282,10 @@ def get_all_clean_metrics_records(report_type:str) -> int:
             response = response.pivot_table(index=['playername', 'timestamp', 'team'], columns='metric', values='value').reset_index()
             output_file = 'output/3.2-1_all_clean_metrics_records_wide_format.csv'\
             
-            # data must be pivoted to calculate avg_torque_asymmetry and avg_max_force_asymmetry after pivot
-            # using formula from index 10 in the results analysis on our literature review
-            response['avg_torque_asymmetry'] = (response['leftTorque'] - response['rightTorque'])/ ((response['leftTorque'] + response['rightTorque']) )*100
-            response['avg_max_force_asymmetry'] = (response['leftMaxForce'] - response['rightMaxForce']) / ((response['leftMaxForce'] + response['rightMaxForce']) ) *100
+            # data must be pivoted to calculate avg_torque_asymmetry and avg_max_force_asymmetry after pivot - using formula from index 10 in the results analysis on our literature review
+            # reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC8488821/
+            response['avg_torque_asymmetry'] = ((response['leftTorque'] - response['rightTorque'])/ (response['leftTorque'] + response['rightTorque']) )*100
+            response['avg_max_force_asymmetry'] = ((response['leftMaxForce'] - response['rightMaxForce']) / (response['leftMaxForce'] + response['rightMaxForce']) ) *100
         try:
             response.to_csv(output_file)
             print(f"Successfully saved to {output_file}")
