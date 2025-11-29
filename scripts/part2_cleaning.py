@@ -41,7 +41,7 @@ get_athletes_not_tested_in_last_num_days(180,"2.1-3")
 ##4.1 Identify athletes who haven't been tested in the last 30 days(for your selected metrics)
 get_athletes_not_tested_in_last_num_days(30,"4.1")
 ##2.1.4 Determine if you have sufficient data to answer your research question
-'''------------------<TODO: Team Discussion>--------------------------
+'''------------------<Team Discussion>--------------------------
 Based on the data understanding and missing data analysis, we have identified that while a significant portion of athletes have sufficient measurements for our selected metrics, there remains a considerable number of athletes with insufficient data. This discrepancy may impact the robustness of our analysis and the validity of our conclusions.
 To address this, we propose the following steps:        '''
 '''1. Data Imputation: For athletes with missing measurements, we can explore data imputation techniques to estimate missing values based on available data trends. This will help in retaining more athletes in our analysis.        '''
