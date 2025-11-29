@@ -1,0 +1,907 @@
+,playername,team
+0,PLAYER_038,Mens Basketball
+1,PLAYER_454,Womens Basketball
+2,PLAYER_751,Womens Basketball
+3,PLAYER_905,Womens Basketball
+4,PLAYER_1015,Womens Basketball
+5,PLAYER_1204,Mens Basketball
+6,PLAYER_1214,Womens Basketball
+7,PLAYER_1240,Womens Basketball
+8,PLAYER_088,Womens Basketball
+9,PLAYER_361,Womens Basketball
+10,PLAYER_690,Womens Basketball
+11,PLAYER_032,Mens Basketball
+12,PLAYER_099,Mens Basketball
+13,PLAYER_375,Mens Basketball
+14,PLAYER_430,Mens Basketball
+15,PLAYER_528,Mens Basketball
+16,PLAYER_533,Mens Basketball
+17,PLAYER_643,Mens Basketball
+18,PLAYER_668,Mens Basketball
+19,PLAYER_894,Mens Basketball
+20,PLAYER_965,Mens Basketball
+21,PLAYER_982,Mens Basketball
+22,PLAYER_1162,Mens Basketball
+23,PLAYER_1208,Mens Basketball
+24,PLAYER_284,Womens Basketball
+25,PLAYER_410,Womens Basketball
+26,PLAYER_470,Womens Basketball
+27,PLAYER_551,Womens Basketball
+28,PLAYER_697,Womens Basketball
+29,PLAYER_744,Womens Basketball
+30,PLAYER_047,Mens Basketball
+31,PLAYER_294,Mens Basketball
+32,PLAYER_312,Mens Basketball
+33,PLAYER_1011,Mens Basketball
+34,PLAYER_1053,Mens Basketball
+35,PLAYER_756,Mens Basketball
+36,PLAYER_914,Mens Basketball
+37,PLAYER_1190,Mens Basketball
+38,PLAYER_992,Mens Basketball
+39,PLAYER_491,Womens Basketball
+40,PLAYER_212,Womens Basketball
+41,PLAYER_1203,Womens Basketball
+42,PLAYER_196,Mens Basketball
+43,PLAYER_334,Mens Basketball
+44,PLAYER_1247,Mens Basketball
+45,PLAYER_1032,Mens Basketball
+46,PLAYER_1135,Mens Basketball
+47,PLAYER_212,Mens Basketball
+48,PLAYER_1047,Mens Basketball
+49,PLAYER_1203,Mens Basketball
+50,PLAYER_137,Mens Basketball
+51,PLAYER_419,Mens Basketball
+52,PLAYER_674,Mens Basketball
+53,PLAYER_1056,Mens Basketball
+54,PLAYER_1114,Mens Basketball
+55,PLAYER_1120,Mens Basketball
+56,PLAYER_1122,Mens Basketball
+57,PLAYER_1191,Mens Basketball
+58,PLAYER_1052,Womens Basketball
+59,PLAYER_105,Womens Basketball
+60,PLAYER_109,Womens Basketball
+61,PLAYER_218,Womens Basketball
+62,PLAYER_432,Womens Basketball
+63,PLAYER_585,Womens Basketball
+64,PLAYER_698,Womens Basketball
+65,PLAYER_792,Womens Basketball
+66,PLAYER_897,Womens Basketball
+67,PLAYER_898,Womens Basketball
+68,PLAYER_1005,Womens Basketball
+69,PLAYER_1034,Womens Basketball
+70,PLAYER_1144,Womens Basketball
+71,PLAYER_137,Mens Soccer
+72,PLAYER_419,Mens Soccer
+73,PLAYER_675,Mens Soccer
+74,PLAYER_1056,Mens Soccer
+75,PLAYER_1114,Mens Soccer
+76,PLAYER_1120,Mens Soccer
+77,PLAYER_1121,Mens Soccer
+78,PLAYER_1191,Mens Soccer
+79,PLAYER_105,Womens Soccer
+80,PLAYER_109,Womens Soccer
+81,PLAYER_218,Womens Soccer
+82,PLAYER_432,Womens Soccer
+83,PLAYER_585,Womens Soccer
+84,PLAYER_698,Womens Soccer
+85,PLAYER_792,Womens Soccer
+86,PLAYER_897,Womens Soccer
+87,PLAYER_898,Womens Soccer
+88,PLAYER_1003,Womens Soccer
+89,PLAYER_1034,Womens Soccer
+90,PLAYER_1144,Womens Soccer
+91,PLAYER_205,Mens Soccer
+92,PLAYER_291,Mens Soccer
+93,PLAYER_310,Mens Soccer
+94,PLAYER_366,Mens Soccer
+95,PLAYER_490,Mens Soccer
+96,PLAYER_617,Mens Soccer
+97,PLAYER_715,Mens Soccer
+98,PLAYER_1196,Mens Soccer
+99,PLAYER_705,Womens Basketball
+100,PLAYER_947,Womens Basketball
+101,PLAYER_955,Womens Basketball
+102,PLAYER_002,Mens Basketball
+103,PLAYER_324,Mens Basketball
+104,PLAYER_687,Mens Basketball
+105,PLAYER_755,Mens Basketball
+106,PLAYER_1052,Mens Basketball
+107,PLAYER_1186,Mens Basketball
+108,PLAYER_693,Mens Basketball
+109,PLAYER_074,Mens Basketball
+110,PLAYER_557,Mens Basketball
+111,PLAYER_293,Womens Basketball
+112,PLAYER_333,Womens Basketball
+113,PLAYER_741,Womens Basketball
+114,PLAYER_1128,Womens Basketball
+115,PLAYER_1139,Womens Basketball
+116,PLAYER_078,Womens Soccer
+117,PLAYER_745,Womens Soccer
+118,PLAYER_084,Womens Soccer
+119,PLAYER_115,Womens Soccer
+120,PLAYER_457,Womens Soccer
+121,PLAYER_469,Womens Soccer
+122,PLAYER_530,Womens Soccer
+123,PLAYER_685,Womens Soccer
+124,PLAYER_769,Womens Soccer
+125,PLAYER_780,Womens Soccer
+126,PLAYER_796,Womens Soccer
+127,PLAYER_896,Womens Soccer
+128,PLAYER_944,Womens Soccer
+129,PLAYER_1094,Womens Soccer
+130,PLAYER_1079,Mens Basketball
+131,PLAYER_438,Womens Soccer
+132,PLAYER_719,Womens Soccer
+133,PLAYER_672,Womens Basketball
+134,PLAYER_1083,Womens Basketball
+135,PLAYER_902,Mens Soccer
+136,PLAYER_1077,Mens Soccer
+137,PLAYER_063,Mens Soccer
+138,PLAYER_796,Mens Soccer
+139,PLAYER_910,Mens Soccer
+140,PLAYER_1034,Mens Soccer
+141,PLAYER_1094,Mens Soccer
+142,PLAYER_530,Mens Soccer
+143,PLAYER_351,Football
+144,PLAYER_023,Football
+145,PLAYER_154,Football
+146,PLAYER_230,Football
+147,PLAYER_021,Football
+148,PLAYER_014,Football
+149,PLAYER_093,Football
+150,PLAYER_244,Football
+151,PLAYER_262,Football
+152,PLAYER_282,Football
+153,PLAYER_325,Football
+154,PLAYER_342,Football
+155,PLAYER_562,Football
+156,PLAYER_567,Football
+157,PLAYER_645,Football
+158,PLAYER_994,Football
+159,PLAYER_1047,Football
+160,PLAYER_1008,Football
+161,PLAYER_1022,Football
+162,PLAYER_1055,Football
+163,PLAYER_1124,Football
+164,PLAYER_1129,Football
+165,PLAYER_1230,Football
+166,PLAYER_066,Mens Basketball
+167,PLAYER_243,Mens Basketball
+168,PLAYER_666,Mens Basketball
+169,PLAYER_988,Mens Basketball
+170,PLAYER_1000,Mens Basketball
+171,PLAYER_006,Mens Basketball
+172,PLAYER_008,Mens Basketball
+173,PLAYER_111,Mens Basketball
+174,PLAYER_136,Mens Basketball
+175,PLAYER_672,Mens Basketball
+176,PLAYER_682,Mens Basketball
+177,PLAYER_743,Mens Basketball
+178,PLAYER_789,Mens Basketball
+179,PLAYER_1020,Mens Basketball
+180,PLAYER_1083,Mens Basketball
+181,PLAYER_122,Mens Basketball
+182,PLAYER_648,Mens Basketball
+183,PLAYER_854,Mens Basketball
+184,PLAYER_1092,Mens Basketball
+185,PLAYER_390,Womens Soccer
+186,PLAYER_803,Womens Soccer
+187,PLAYER_1152,Womens Soccer
+188,PLAYER_052,Womens Soccer
+189,PLAYER_910,Womens Soccer
+190,PLAYER_112,Mens Soccer
+191,PLAYER_455,Womens Soccer
+192,PLAYER_529,Football
+193,PLAYER_006,Womens Basketball
+194,PLAYER_008,Womens Basketball
+195,PLAYER_111,Womens Basketball
+196,PLAYER_122,Womens Basketball
+197,PLAYER_136,Womens Basketball
+198,PLAYER_648,Womens Basketball
+199,PLAYER_682,Womens Basketball
+200,PLAYER_743,Womens Basketball
+201,PLAYER_756,Womens Basketball
+202,PLAYER_789,Womens Basketball
+203,PLAYER_854,Womens Basketball
+204,PLAYER_1020,Womens Basketball
+205,PLAYER_1092,Womens Basketball
+206,PLAYER_1190,Womens Basketball
+207,PLAYER_182,Mens Soccer
+208,PLAYER_613,Mens Soccer
+209,PLAYER_774,Mens Soccer
+210,PLAYER_964,Mens Soccer
+211,PLAYER_1224,Mens Soccer
+212,PLAYER_159,Womens Basketball
+213,PLAYER_296,Womens Basketball
+214,PLAYER_555,Womens Basketball
+215,PLAYER_706,Womens Basketball
+216,PLAYER_1239,Womens Basketball
+217,PLAYER_1213,Womens Basketball
+218,PLAYER_033,Mens Soccer
+219,PLAYER_606,Football
+220,PLAYER_923,Football
+221,PLAYER_1058,Football
+222,PLAYER_112,Womens Soccer
+223,PLAYER_376,Womens Basketball
+224,PLAYER_482,Football
+225,PLAYER_489,Football
+226,PLAYER_948,Football
+227,PLAYER_1126,Football
+228,PLAYER_198,Football
+229,PLAYER_816,Football
+230,PLAYER_888,Football
+231,PLAYER_1053,Football
+232,PLAYER_193,Mens Soccer
+233,PLAYER_423,Mens Soccer
+234,PLAYER_732,Mens Soccer
+235,PLAYER_915,Mens Soccer
+236,PLAYER_078,Mens Soccer
+237,PLAYER_084,Mens Soccer
+238,PLAYER_115,Mens Soccer
+239,PLAYER_383,Mens Soccer
+240,PLAYER_432,Mens Soccer
+241,PLAYER_438,Mens Soccer
+242,PLAYER_469,Mens Soccer
+243,PLAYER_698,Mens Soccer
+244,PLAYER_719,Mens Soccer
+245,PLAYER_769,Mens Soccer
+246,PLAYER_780,Mens Soccer
+247,PLAYER_944,Mens Soccer
+248,PLAYER_1152,Mens Soccer
+249,PLAYER_685,Mens Soccer
+250,PLAYER_855,Mens Soccer
+251,PLAYER_610,Football
+252,PLAYER_184,Football
+253,PLAYER_297,Football
+254,PLAYER_953,Football
+255,PLAYER_1125,Football
+256,PLAYER_526,Football
+257,PLAYER_1232,Football
+258,PLAYER_145,Mens Basketball
+259,PLAYER_252,Mens Basketball
+260,PLAYER_270,Mens Basketball
+261,PLAYER_579,Mens Basketball
+262,PLAYER_593,Mens Basketball
+263,PLAYER_933,Mens Basketball
+264,PLAYER_995,Mens Basketball
+265,PLAYER_183,Mens Basketball
+266,PLAYER_1264,Womens Basketball
+267,PLAYER_341,Womens Basketball
+268,PLAYER_413,Womens Soccer
+269,PLAYER_552,Womens Soccer
+270,PLAYER_746,Womens Soccer
+271,PLAYER_1265,Womens Soccer
+272,PLAYER_855,Womens Soccer
+273,PLAYER_1171,Womens Soccer
+274,PLAYER_480,Womens Soccer
+275,PLAYER_017,Mens Soccer
+276,PLAYER_544,Mens Soccer
+277,PLAYER_653,Mens Soccer
+278,PLAYER_1187,Mens Soccer
+279,PLAYER_004,Mens Soccer
+280,PLAYER_672,Womens Soccer
+281,PLAYER_854,Womens Soccer
+282,PLAYER_131,Mens Basketball
+283,PLAYER_227,Mens Basketball
+284,PLAYER_497,Mens Basketball
+285,PLAYER_620,Mens Basketball
+286,PLAYER_1045,Mens Basketball
+287,PLAYER_285,Mens Basketball
+288,PLAYER_1267,Womens Basketball
+289,PLAYER_494,Womens Basketball
+290,PLAYER_079,Mens Soccer
+291,PLAYER_480,Mens Soccer
+292,PLAYER_1171,Mens Soccer
+293,PLAYER_746,Mens Soccer
+294,PLAYER_846,Mens Soccer
+295,PLAYER_803,Mens Soccer
+296,PLAYER_404,Mens Basketball
+297,PLAYER_412,Mens Basketball
+298,PLAYER_616,Mens Basketball
+299,PLAYER_958,Mens Basketball
+300,PLAYER_1036,Mens Basketball
+301,PLAYER_1050,Mens Basketball
+302,PLAYER_042,Womens Basketball
+303,PLAYER_056,Womens Basketball
+304,PLAYER_190,Womens Basketball
+305,PLAYER_343,Womens Basketball
+306,PLAYER_363,Womens Basketball
+307,PLAYER_600,Womens Basketball
+308,PLAYER_851,Womens Basketball
+309,PLAYER_906,Womens Basketball
+310,PLAYER_1095,Womens Basketball
+311,PLAYER_540,Mens Basketball
+312,PLAYER_1282,Mens Basketball
+313,PLAYER_007,Womens Soccer
+314,PLAYER_053,Womens Soccer
+315,PLAYER_860,Womens Soccer
+316,PLAYER_961,Womens Soccer
+317,PLAYER_1089,Womens Soccer
+318,PLAYER_1188,Mens Basketball
+319,PLAYER_747,Womens Soccer
+320,PLAYER_158,Mens Soccer
+321,PLAYER_518,Mens Soccer
+322,PLAYER_539,Mens Soccer
+323,PLAYER_1069,Mens Soccer
+324,PLAYER_1104,Mens Soccer
+325,PLAYER_076,Mens Basketball
+326,PLAYER_721,Mens Soccer
+327,PLAYER_1116,Mens Soccer
+328,PLAYER_913,Mens Soccer
+329,PLAYER_740,Mens Soccer
+330,PLAYER_1112,Mens Soccer
+331,PLAYER_128,Womens Soccer
+332,PLAYER_135,Womens Soccer
+333,PLAYER_760,Mens Basketball
+334,PLAYER_332,Womens Basketball
+335,PLAYER_051,Mens Basketball
+336,PLAYER_463,Mens Basketball
+337,PLAYER_473,Mens Basketball
+338,PLAYER_646,Mens Basketball
+339,PLAYER_1028,Mens Basketball
+340,PLAYER_353,Football
+341,PLAYER_1084,Football
+342,PLAYER_256,Football
+343,PLAYER_471,Football
+344,PLAYER_1133,Baseball
+345,PLAYER_171,Baseball
+346,PLAYER_416,Baseball
+347,PLAYER_415,Baseball
+348,PLAYER_488,Baseball
+349,PLAYER_338,Baseball
+350,PLAYER_826,Baseball
+351,PLAYER_141,Baseball
+352,PLAYER_318,Football
+353,PLAYER_535,Football
+354,PLAYER_745,Women's Soccer
+355,PLAYER_310,Men's Soccer
+356,PLAYER_490,Men's Soccer
+357,PLAYER_137,Men's Soccer
+358,PLAYER_1196,Men's Soccer
+359,PLAYER_617,Men's Soccer
+360,PLAYER_205,Men's Soccer
+361,PLAYER_384,Women's Soccer
+362,PLAYER_792,Women's Soccer
+363,PLAYER_218,Women's Soccer
+364,PLAYER_946,Women's Soccer
+365,PLAYER_719,Women's Soccer
+366,PLAYER_1143,Women's Soccer
+367,PLAYER_1191,Men's Soccer
+368,PLAYER_1114,Men's Soccer
+369,PLAYER_882,Mens Lax
+370,PLAYER_884,Mens Lax
+371,PLAYER_301,Mens Lax
+372,PLAYER_762,Mens Lax
+373,PLAYER_878,Mens Lax
+374,PLAYER_073,Mens Lax
+375,PLAYER_142,Mens Lax
+376,PLAYER_1222,Mens Lax
+377,PLAYER_883,Mens Lax
+378,PLAYER_828,Mens Lax
+379,PLAYER_349,Mens Lax
+380,PLAYER_1074,Mens Lax
+381,PLAYER_1147,Women's Lacrosse
+382,PLAYER_255,Women's Lacrosse
+383,PLAYER_1023,Women's Lacrosse
+384,PLAYER_465,Women's Lacrosse
+385,PLAYER_758,Women's Lacrosse
+386,PLAYER_901,Women's Lacrosse
+387,PLAYER_667,Women's Lacrosse
+388,PLAYER_326,Women's Lacrosse
+389,PLAYER_766,Women's Lacrosse
+390,PLAYER_381,Women's Lacrosse
+391,PLAYER_742,Women's Lacrosse
+392,PLAYER_408,Women's Lacrosse
+393,PLAYER_1248,Women's Lacrosse
+394,PLAYER_527,Women's Lacrosse
+395,PLAYER_683,Women's Lacrosse
+396,PLAYER_727,Women's Lacrosse
+397,PLAYER_620,Women's Lacrosse
+398,PLAYER_453,Women's Lacrosse
+399,PLAYER_1249,Women's Lacrosse
+400,PLAYER_1159,Women's Lacrosse
+401,PLAYER_802,Track
+402,PLAYER_903,Track
+403,PLAYER_1182,Track
+404,PLAYER_949,Track
+405,PLAYER_973,Track
+406,PLAYER_1038,Track
+407,PLAYER_178,Track
+408,PLAYER_055,Track
+409,PLAYER_029,Track
+410,PLAYER_663,Track
+411,PLAYER_840,Track
+412,PLAYER_016,Track
+413,PLAYER_346,Track
+414,PLAYER_1117,Track
+415,PLAYER_686,Track
+416,PLAYER_302,Track
+417,PLAYER_431,Track
+418,PLAYER_1141,Track
+419,PLAYER_444,Track
+420,PLAYER_1250,Track
+421,PLAYER_531,Track
+422,PLAYER_102,Track
+423,PLAYER_980,Track
+424,PLAYER_889,Track
+425,PLAYER_1251,Women's Lacrosse
+426,PLAYER_676,Women's Lacrosse
+427,PLAYER_382,Women's Lacrosse
+428,PLAYER_1252,Women's Lacrosse
+429,PLAYER_710,Women's Lacrosse
+430,PLAYER_197,Football
+431,PLAYER_952,Football
+432,PLAYER_216,Football
+433,PLAYER_320,Football
+434,PLAYER_092,Football
+435,PLAYER_720,Tennis
+436,PLAYER_822,Tennis
+437,PLAYER_207,Tennis
+438,PLAYER_221,Tennis
+439,PLAYER_082,Tennis
+440,PLAYER_1097,Tennis
+441,PLAYER_775,Tennis
+442,PLAYER_897,Women's Soccer
+443,PLAYER_1025,Track
+444,PLAYER_1238,Football
+445,PLAYER_177,Swim/Dive
+446,PLAYER_1061,Football
+447,PLAYER_428,Football
+448,PLAYER_712,Football
+449,PLAYER_782,Football
+450,PLAYER_267,Football
+451,PLAYER_1128,Women's Basketball
+452,PLAYER_006,Volleyball
+453,PLAYER_647,Volleyball
+454,PLAYER_406,Volleyball
+455,PLAYER_648,Volleyball
+456,PLAYER_743,Volleyball
+457,PLAYER_1190,Volleyball
+458,PLAYER_754,Volleyball
+459,PLAYER_1186,Men's Basketball
+460,PLAYER_755,Men's Basketball
+461,PLAYER_503,Football
+462,PLAYER_1218,Football
+463,PLAYER_036,Volleyball
+464,PLAYER_796,Women's Soccer
+465,PLAYER_896,Women's Soccer
+466,PLAYER_457,Women's Soccer
+467,PLAYER_944,Women's Soccer
+468,PLAYER_1094,Women's Soccer
+469,PLAYER_685,Women's Soccer
+470,PLAYER_115,Women's Soccer
+471,PLAYER_084,Women's Soccer
+472,PLAYER_780,Women's Soccer
+473,PLAYER_557,Men's Basketball
+474,PLAYER_673,Football
+475,PLAYER_589,Football
+476,PLAYER_161,Football
+477,PLAYER_520,Football
+478,PLAYER_728,Men's Soccer
+479,PLAYER_612,Men's Soccer
+480,PLAYER_902,Men's Soccer
+481,PLAYER_964,Men's Soccer
+482,PLAYER_1225,Men's Soccer
+483,PLAYER_1077,Men's Soccer
+484,PLAYER_1189,Mens Lax
+485,PLAYER_1049,Mens Lax
+486,PLAYER_510,Mens Lax
+487,PLAYER_1108,Mens Lax
+488,PLAYER_429,Mens Lax
+489,PLAYER_1229,Mens Lax
+490,PLAYER_1057,Mens Lax
+491,PLAYER_525,Mens Lax
+492,PLAYER_1199,Mens Lax
+493,PLAYER_1226,Mens Lax
+494,PLAYER_866,Mens Lax
+495,PLAYER_107,Mens Lax
+496,PLAYER_1210,Mens Lax
+497,PLAYER_147,Mens Lax
+498,PLAYER_071,Mens Lax
+499,PLAYER_357,Mens Lax
+500,PLAYER_1131,Women's Lacrosse
+501,PLAYER_051,Women's Lacrosse
+502,PLAYER_611,Women's Lacrosse
+503,PLAYER_474,Women's Lacrosse
+504,PLAYER_189,Women's Lacrosse
+505,PLAYER_286,Women's Lacrosse
+506,PLAYER_981,Women's Lacrosse
+507,PLAYER_596,Mens Lax
+508,PLAYER_990,Mens Lax
+509,PLAYER_1109,Mens Lax
+510,PLAYER_337,Mens Lax
+511,PLAYER_358,Mens Lax
+512,PLAYER_101,Mens Lax
+513,PLAYER_930,Mens Lax
+514,PLAYER_299,Mens Lax
+515,PLAYER_094,Baseball
+516,PLAYER_874,Baseball
+517,PLAYER_607,Baseball
+518,PLAYER_563,Baseball
+519,PLAYER_219,Softball
+520,PLAYER_179,Softball
+521,PLAYER_048,Softball
+522,PLAYER_117,Softball
+523,PLAYER_387,Softball
+524,PLAYER_1134,Softball
+525,PLAYER_391,Softball
+526,PLAYER_060,Softball
+527,PLAYER_1149,Softball
+528,PLAYER_788,Softball
+529,PLAYER_058,Softball
+530,PLAYER_462,Softball
+531,PLAYER_671,Softball
+532,PLAYER_861,Softball
+533,PLAYER_234,Softball
+534,PLAYER_904,Softball
+535,PLAYER_818,Swim/Dive
+536,PLAYER_765,Swim/Dive
+537,PLAYER_1099,Swim/Dive
+538,PLAYER_1100,Swim/Dive
+539,PLAYER_1024,Swim/Dive
+540,PLAYER_588,Swim/Dive
+541,PLAYER_392,Swim/Dive
+542,PLAYER_479,Swim/Dive
+543,PLAYER_019,Swim/Dive
+544,PLAYER_028,Swim/Dive
+545,PLAYER_176,Swim/Dive
+546,PLAYER_167,Swim/Dive
+547,PLAYER_791,Swim/Dive
+548,PLAYER_407,Swim/Dive
+549,PLAYER_086,Swim/Dive
+550,PLAYER_1244,Swim/Dive
+551,PLAYER_1235,Swim/Dive
+552,PLAYER_254,Swim/Dive
+553,PLAYER_426,Women's Lacrosse
+554,PLAYER_427,Women's Lacrosse
+555,PLAYER_499,Women's Lacrosse
+556,PLAYER_724,Women's Lacrosse
+557,PLAYER_733,Women's Lacrosse
+558,PLAYER_031,Track
+559,PLAYER_311,Track
+560,PLAYER_108,Track
+561,PLAYER_939,Track
+562,PLAYER_734,Track
+563,PLAYER_1079,Men's Basketball
+564,PLAYER_577,Women's Lacrosse
+565,PLAYER_637,Track
+566,PLAYER_232,Track
+567,PLAYER_950,Mens Lax
+568,PLAYER_445,Mens Lax
+569,PLAYER_927,Baseball
+570,PLAYER_155,Football
+571,PLAYER_1197,Football
+572,PLAYER_630,Football
+573,PLAYER_575,Football
+574,PLAYER_213,Football
+575,PLAYER_517,Football
+576,PLAYER_1155,Football
+577,PLAYER_912,Football
+578,PLAYER_352,Football
+579,PLAYER_359,Football
+580,PLAYER_803,Women's Soccer
+581,PLAYER_182,Men's Soccer
+582,PLAYER_062,Men's Soccer
+583,PLAYER_283,Football
+584,PLAYER_932,Men's Soccer
+585,PLAYER_830,Football
+586,PLAYER_547,Football
+587,PLAYER_572,Football
+588,PLAYER_066,Men's Basketball
+589,PLAYER_988,Men's Basketball
+590,PLAYER_098,Football
+591,PLAYER_555,Women's Basketball
+592,PLAYER_789,Volleyball
+593,PLAYER_519,Football
+594,PLAYER_972,Football
+595,PLAYER_1152,Women's Soccer
+596,PLAYER_670,Women's Soccer
+597,PLAYER_112,Women's Soccer
+598,PLAYER_910,Women's Soccer
+599,PLAYER_845,Men's Soccer
+600,PLAYER_732,Men's Soccer
+601,PLAYER_423,Men's Soccer
+602,PLAYER_139,Men's Soccer
+603,PLAYER_052,Women's Soccer
+604,PLAYER_422,Football
+605,PLAYER_1072,Football
+606,PLAYER_347,Football
+607,PLAYER_374,Football
+608,PLAYER_292,Football
+609,PLAYER_978,Football
+610,PLAYER_514,Football
+611,PLAYER_193,Men's Soccer
+612,PLAYER_017,Men's Soccer
+613,PLAYER_033,Men's Soccer
+614,PLAYER_657,Men's Soccer
+615,PLAYER_097,Men's Soccer
+616,PLAYER_599,Men's Soccer
+617,PLAYER_523,Men's Soccer
+618,PLAYER_1200,Mens Lax
+619,PLAYER_239,Mens Lax
+620,PLAYER_385,Women's Lacrosse
+621,PLAYER_414,Women's Lacrosse
+622,PLAYER_452,Women's Lacrosse
+623,PLAYER_477,Women's Lacrosse
+624,PLAYER_309,Tennis
+625,PLAYER_862,Tennis
+626,PLAYER_281,Track
+627,PLAYER_1065,Mens Lax
+628,PLAYER_1227,Mens Lax
+629,PLAYER_654,Mens Lax
+630,PLAYER_1223,Mens Lax
+631,PLAYER_225,Mens Lax
+632,PLAYER_451,Mens Lax
+633,PLAYER_441,Mens Lax
+634,PLAYER_814,Mens Lax
+635,PLAYER_481,Mens Lax
+636,PLAYER_401,Baseball
+637,PLAYER_918,Baseball
+638,PLAYER_275,Baseball
+639,PLAYER_1201,Baseball
+640,PLAYER_191,Baseball
+641,PLAYER_417,Baseball
+642,PLAYER_140,Baseball
+643,PLAYER_1051,Baseball
+644,PLAYER_437,Track
+645,PLAYER_561,Track
+646,PLAYER_403,Baseball
+647,PLAYER_820,Women's Lacrosse
+648,PLAYER_043,Women's Lacrosse
+649,PLAYER_009,Women's Lacrosse
+650,PLAYER_908,Women's Lacrosse
+651,PLAYER_1006,Women's Lacrosse
+652,PLAYER_1105,Baseball
+653,PLAYER_604,Baseball
+654,PLAYER_940,Track
+655,PLAYER_199,Baseball
+656,PLAYER_522,Baseball
+657,PLAYER_1202,Baseball
+658,PLAYER_1192,Football
+659,PLAYER_779,Football
+660,PLAYER_566,Football
+661,PLAYER_1091,Track
+662,PLAYER_1123,Track
+663,PLAYER_911,Track
+664,PLAYER_317,Track
+665,PLAYER_841,Baseball
+666,PLAYER_236,Football
+667,PLAYER_223,Football
+668,PLAYER_501,Football
+669,PLAYER_143,Football
+670,PLAYER_869,Football
+671,PLAYER_037,Football
+672,PLAYER_1207,Football
+673,PLAYER_269,Women's Lacrosse
+674,PLAYER_602,Staff
+675,PLAYER_220,Football
+676,PLAYER_252,Men's Basketball
+677,PLAYER_144,Men's Basketball
+678,PLAYER_593,Men's Basketball
+679,PLAYER_579,Men's Basketball
+680,PLAYER_270,Men's Basketball
+681,PLAYER_183,Men's Basketball
+682,PLAYER_995,Men's Basketball
+683,PLAYER_933,Men's Basketball
+684,PLAYER_486,Football
+685,PLAYER_298,Football
+686,PLAYER_798,Football
+687,PLAYER_560,Football
+688,PLAYER_722,Football
+689,PLAYER_1112,Men's Soccer
+690,PLAYER_809,Women's Soccer
+691,PLAYER_821,Men's Soccer
+692,PLAYER_413,Women's Soccer
+693,PLAYER_1198,Women's Soccer
+694,PLAYER_746,Women's Soccer
+695,PLAYER_1265,Women's Soccer
+696,PLAYER_552,Women's Soccer
+697,PLAYER_545,Men's Soccer
+698,PLAYER_1194,Men's Soccer
+699,PLAYER_574,Football
+700,PLAYER_005,Men's Soccer
+701,PLAYER_483,Baseball
+702,PLAYER_827,Baseball
+703,PLAYER_1220,Baseball
+704,PLAYER_035,Baseball
+705,PLAYER_838,Baseball
+706,PLAYER_336,Baseball
+707,PLAYER_626,Baseball
+708,PLAYER_1070,Baseball
+709,PLAYER_865,Baseball
+710,PLAYER_548,Baseball
+711,PLAYER_920,Baseball
+712,PLAYER_977,Baseball
+713,PLAYER_784,Baseball
+714,PLAYER_934,Baseball
+715,PLAYER_876,Baseball
+716,PLAYER_188,Baseball
+717,PLAYER_169,Baseball
+718,PLAYER_786,Baseball
+719,PLAYER_936,Baseball
+720,PLAYER_900,Women's Lacrosse
+721,PLAYER_646,Women's Lacrosse
+722,PLAYER_132,Women's Lacrosse
+723,PLAYER_464,Women's Lacrosse
+724,PLAYER_227,Women's Lacrosse
+725,PLAYER_665,Softball
+726,PLAYER_941,Softball
+727,PLAYER_916,Mens Lax
+728,PLAYER_867,Mens Lax
+729,PLAYER_160,Mens Lax
+730,PLAYER_195,Mens Lax
+731,PLAYER_880,Mens Lax
+732,PLAYER_015,Mens Lax
+733,PLAYER_1193,Mens Lax
+734,PLAYER_411,Mens Lax
+735,PLAYER_164,Mens Lax
+736,PLAYER_1163,Mens Lax
+737,PLAYER_1137,Mens Lax
+738,PLAYER_1180,Mens Lax
+739,PLAYER_1176,Mens Lax
+740,PLAYER_842,Mens Lax
+741,PLAYER_1019,Mens Lax
+742,PLAYER_1164,Mens Lax
+743,PLAYER_1045,Women's Lacrosse
+744,PLAYER_124,Women's Lacrosse
+745,PLAYER_379,Women's Lacrosse
+746,PLAYER_480,Women's Soccer
+747,PLAYER_012,Baseball
+748,PLAYER_222,Baseball
+749,PLAYER_945,Women's Lacrosse
+750,PLAYER_331,Men's Soccer
+751,PLAYER_1171,Women's Soccer
+752,PLAYER_1165,Mens Lax
+753,PLAYER_777,Football
+754,PLAYER_245,Football
+755,PLAYER_278,Football
+756,PLAYER_546,Football
+757,PLAYER_998,Football
+758,PLAYER_565,Football
+759,PLAYER_1168,Football
+760,PLAYER_315,Football
+761,PLAYER_089,Football
+762,PLAYER_696,Football
+763,PLAYER_1142,Football
+764,PLAYER_929,Football
+765,PLAYER_634,Football
+766,PLAYER_119,Football
+767,PLAYER_770,Volleyball
+768,PLAYER_011,Football
+769,PLAYER_355,Football
+770,PLAYER_700,Football
+771,PLAYER_812,Football
+772,PLAYER_404,Men's Basketball
+773,PLAYER_1050,Men's Basketball
+774,PLAYER_958,Men's Basketball
+775,PLAYER_1036,Men's Basketball
+776,PLAYER_601,Women's Basketball
+777,PLAYER_332,Women's Basketball
+778,PLAYER_042,Women's Basketball
+779,PLAYER_1096,Women's Basketball
+780,PLAYER_190,Women's Basketball
+781,PLAYER_056,Women's Basketball
+782,PLAYER_363,Women's Basketball
+783,PLAYER_128,Volleyball
+784,PLAYER_130,Volleyball
+785,PLAYER_251,Volleyball
+786,PLAYER_961,Women's Soccer
+787,PLAYER_1089,Women's Soccer
+788,PLAYER_007,Women's Soccer
+789,PLAYER_053,Women's Soccer
+790,PLAYER_614,Women's Soccer
+791,PLAYER_158,Men's Soccer
+792,PLAYER_1040,Men's Soccer
+793,PLAYER_539,Men's Soccer
+794,PLAYER_518,Men's Soccer
+795,PLAYER_1104,Men's Soccer
+796,PLAYER_343,Women's Basketball
+797,PLAYER_405,Women's Lacrosse
+798,PLAYER_125,Women's Lacrosse
+799,PLAYER_433,Women's Lacrosse
+800,PLAYER_763,Women's Lacrosse
+801,PLAYER_233,Women's Lacrosse
+802,PLAYER_890,Women's Lacrosse
+803,PLAYER_388,Softball
+804,PLAYER_639,Softball
+805,PLAYER_118,Softball
+806,PLAYER_852,Softball
+807,PLAYER_1002,Softball
+808,PLAYER_493,Women's Basketball
+809,PLAYER_229,Baseball
+810,PLAYER_515,Baseball
+811,PLAYER_917,Baseball
+812,PLAYER_1033,Baseball
+813,PLAYER_484,Baseball
+814,PLAYER_274,Baseball
+815,PLAYER_778,Baseball
+816,PLAYER_354,Baseball
+817,PLAYER_1188,Men's Basketball
+818,PLAYER_760,Men's Basketball
+819,PLAYER_540,Men's Basketball
+820,PLAYER_277,Mens Lax
+821,PLAYER_507,Mens Lax
+822,PLAYER_1030,Mens Lax
+823,PLAYER_149,Mens Lax
+824,PLAYER_1110,Mens Lax
+825,PLAYER_172,Mens Lax
+826,PLAYER_968,Mens Lax
+827,PLAYER_509,Mens Lax
+828,PLAYER_350,Football
+829,PLAYER_209,Mens Lax
+830,PLAYER_1233,Mens Lax
+831,PLAYER_1037,Mens Lax
+832,PLAYER_476,Mens Lax
+833,PLAYER_597,Mens Lax
+834,PLAYER_442,Mens Lax
+835,PLAYER_1237,Mens Lax
+836,PLAYER_785,Mens Lax
+837,PLAYER_268,Mens Lax
+838,PLAYER_261,Mens Lax
+839,PLAYER_707,Mens Lax
+840,PLAYER_214,Women's Lacrosse
+841,PLAYER_044,Women's Lacrosse
+842,PLAYER_039,Women's Lacrosse
+843,PLAYER_468,Women's Lacrosse
+844,PLAYER_131,Women's Lacrosse
+845,PLAYER_1245,Women's Lacrosse
+846,PLAYER_963,Women's Lacrosse
+847,PLAYER_040,Women's Lacrosse
+848,PLAYER_152,Women's Lacrosse
+849,PLAYER_1054,Women's Lacrosse
+850,PLAYER_498,Women's Lacrosse
+851,PLAYER_217,Women's Lacrosse
+852,PLAYER_960,Women's Lacrosse
+853,PLAYER_083,Women's Lacrosse
+854,PLAYER_957,Women's Lacrosse
+855,PLAYER_153,Football
+856,PLAYER_580,Football
+857,PLAYER_1118,Football
+858,PLAYER_258,Football
+859,PLAYER_769,Women's Soccer
+860,PLAYER_469,Women's Soccer
+861,PLAYER_078,Women's Soccer
+862,PLAYER_747,Women's Soccer
+863,PLAYER_571,Football
+864,PLAYER_658,Football
+865,PLAYER_395,Football
+866,PLAYER_661,Football
+867,PLAYER_259,Football
+868,PLAYER_1179,Football
+869,PLAYER_1241,Volleyball
+870,PLAYER_466,Volleyball
+871,PLAYER_672,Volleyball
+872,PLAYER_1007,Football
+873,PLAYER_412,Men's Basketball
+874,PLAYER_616,Men's Basketball
+875,PLAYER_906,Women's Basketball
+876,PLAYER_1264,Women's Basketball
+877,PLAYER_851,Women's Basketball
+878,PLAYER_705,Women's Basketball
+879,PLAYER_1286,Volleyball
+880,PLAYER_304,Men's Soccer
+881,PLAYER_1062,Men's Soccer
+882,PLAYER_860,Women's Soccer
+883,PLAYER_684,Women's Lacrosse
+884,PLAYER_1027,Women's Lacrosse
+885,PLAYER_694,Women's Lacrosse
+886,PLAYER_393,Women's Lacrosse
+887,PLAYER_678,Softball
+888,PLAYER_790,Softball
+889,PLAYER_116,Softball
+890,PLAYER_886,Baseball
+891,PLAYER_843,Baseball
+892,PLAYER_018,Baseball
+893,PLAYER_418,Baseball
+894,PLAYER_247,Baseball
+895,PLAYER_559,Baseball
+896,PLAYER_068,Men's Basketball
+897,PLAYER_104,Mens Lax
+898,PLAYER_201,Mens Lax
+899,PLAYER_508,Mens Lax
+900,PLAYER_1113,Mens Lax
+901,PLAYER_512,Mens Lax
+902,PLAYER_726,Mens Lax
+903,PLAYER_330,Mens Lax
+904,PLAYER_730,Mens Lax
+905,PLAYER_505,Mens Lax

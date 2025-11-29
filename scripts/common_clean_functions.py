@@ -112,14 +112,14 @@ def get_team_percentages_with_athletes_with_at_least_5_measurements() -> int:
         for index, row in response.iterrows():
             print(f"  {row['team']}: {row['percentage']}% ({row['athletes_with_5_plus']}/{row['total_athletes_in_team']})")
     return response
-def get_athletes_not_tested_in_last_6_months() -> int:
+def get_athletes_not_tested_in_last_num_days(days_ago: int,filePrefixName: str) -> int:
     """Get the percentage of athletes not tested in the last 6 months.
     Returns:
         int: The percentage of athletes not tested in the last 6 months.
         csv: A CSV file containing all records.
     """
-    ## get mysql date 6 months ago
-    six_months_ago = (datetime.now() - timedelta(days=180)).strftime('%Y-%m-%d %H:%M:%S')
+    ## get mysql date -target_num_days_ago
+    target_num_days_ago = (datetime.now() - timedelta(days=days_ago)).strftime('%Y-%m-%d %H:%M:%S')
     ## get athletes who haven't been tested in the last 6 months (for your selected metrics)
     sql_test_query = "SELECT DISTINCT playername, team " \
                         "FROM (SELECT DISTINCT playername, team FROM research_experiment_refactor_test " \
@@ -128,12 +128,12 @@ def get_athletes_not_tested_in_last_6_months() -> int:
                         "WHERE playername NOT IN (SELECT DISTINCT playername FROM research_experiment_refactor_test " \
                         "WHERE value IS NOT NULL AND value > 0.0 " \
                         "AND metric IN ('leftMaxForce', 'rightMaxForce', 'leftTorque', 'rightTorque', 'accel_load_accum', 'distance_total') " \
-                        "AND (timestamp >= '" + six_months_ago + "' OR created_at >= '" + six_months_ago + "'));"
+                        "AND (timestamp >= '" + target_num_days_ago + "' OR created_at >= '" + target_num_days_ago + "'));"
     response = run_sport_data_query(sql_test_query)
 
     if not response.empty:
-        response.to_csv('output/2.1-3_athletes_not_tested_in_last_6_months.csv')
-        print(f"The percentage of athletes NOT tested in the last 6 months for selected metrics is {response['playername'].nunique()/get_unique_athletes() * 100:.2f}%.")
+        response.to_csv(f'output/{filePrefixName}_athletes_not_tested_in_last_{days_ago}_days.csv')
+        print(f"The percentage of athletes NOT tested in the last {days_ago} days for selected metrics is {response['playername'].nunique()/get_unique_athletes() * 100:.2f}%.")
  
     return response['playername'].unique()
 def get_data_in_wide_format_by_athlete_and_metric(input_metric_list: list, input_playername_list: list, format_type: str) -> pd.DataFrame:

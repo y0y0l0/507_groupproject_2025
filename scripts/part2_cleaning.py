@@ -1,5 +1,5 @@
 import platform as platform
-from common_clean_functions import get_data_in_wide_format_by_athlete_and_metric,get_team_percentages_with_athletes_with_at_least_5_measurements,get_athletes_not_tested_in_last_6_months,get_all_clean_metrics_records,get_metric_with_most_missing_records,get_athletes_with_at_least_5_measurements_in_selected_metrics,get_athletes_with_5_measurements_not_in_selected_metrics,get_mean_value_for_each_team
+from common_clean_functions import get_data_in_wide_format_by_athlete_and_metric,get_team_percentages_with_athletes_with_at_least_5_measurements,get_athletes_not_tested_in_last_num_days,get_all_clean_metrics_records,get_metric_with_most_missing_records,get_athletes_with_at_least_5_measurements_in_selected_metrics,get_athletes_with_5_measurements_not_in_selected_metrics,get_mean_value_for_each_team
 from matched_metrics_function import get_matched_metrics_by_date
 
 '''2.1 Data Understanding Recap (Group)
@@ -37,7 +37,9 @@ get_athletes_with_5_measurements_not_in_selected_metrics()
 # Percentage = (811/1287)*100 = 63.01%
 get_team_percentages_with_athletes_with_at_least_5_measurements()
 ##2.1-3 Identify athletes who haven't been tested in the last 6 months (for your selected metrics)
-get_athletes_not_tested_in_last_6_months()
+get_athletes_not_tested_in_last_num_days(180,"2.1-3")
+##4.1 Identify athletes who haven't been tested in the last 30 days(for your selected metrics)
+get_athletes_not_tested_in_last_num_days(30,"4.1")
 ##2.1.4 Determine if you have sufficient data to answer your research question
 '''------------------<TODO: Team Discussion>--------------------------
 Based on the data understanding and missing data analysis, we have identified that while a significant portion of athletes have sufficient measurements for our selected metrics, there remains a considerable number of athletes with insufficient data. This discrepancy may impact the robustness of our analysis and the validity of our conclusions.
